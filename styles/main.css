@@ -1,0 +1,204 @@
+:root {
+	--vermelho: #ffa500;
+	--preto: #141414;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--preto);
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+}
+header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2%;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:visited {
+	color: #000;
+}
+a:active {
+	color: #000;
+}
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+
+header .container h2#logo {
+	color: var(--vermelho);
+	letter-spacing: 2.5px;
+	font-family: 'Arial Black', sans-serif;
+	font-size: 40px;
+	font-weight: 600;
+	margin-left: 10px;
+}
+
+header .container nav a {
+	text-decoration: none;
+	color: #aaa;
+	margin-right: 10px;
+	transition: color 0.25s ease-in-out;
+}
+
+header .container nav a:hover {
+	color: var(--vermelho);
+}
+
+.filme-principal {
+	font-size: 16px;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+		url('../imgs/akamagakill.jpg');
+
+	background-repeat: no-repeat;
+	background-size: 200%;
+	background-position-y: top;
+	background-position-x: center;
+	background-attachment: fixed;
+
+	backdrop-filter: blur(10px);
+
+	height: 600px;
+	padding: 5%;
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: start-flex;
+}
+.carrosel-filmes {
+	margin-bottom: 2%;
+}
+
+.filme-principal .titulo {
+	font-size: 42px;
+	color: #fff;
+	margin-bottom: 15px;
+	margin-top: 15%;
+
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.filme-principal .description {
+	color: #fff;
+	margin-bottom: 40px;
+}
+
+.filme-principal .botoes .botao {
+	background-color: hsla(39, 100%, 50%, 0.65);
+	cursor: pointer;
+	border: none;
+	color: #000;
+	padding: 15px 35px;
+	margin-right: 15px;
+	font-size: 12px;
+	transition: color 0.25s ease-in-out;
+	transition: background-color 0.25s ease-in-out;
+}
+
+.filme-principal .botoes .botao:hover {
+	background-color: var(--vermelho);
+}
+
+.filme-principal .botoes .botao i {
+	margin-right: 10px;
+}
+
+.box-filme {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+
+.box-filme img {
+	height: 100%;
+	width: 100%;
+	display: block;
+	filter: brightness(40%);
+	transition: filter 0.25s ease;
+}
+
+.box-filme:hover img {
+	filter: brightness(80%);
+}
+
+.box-filme figcaption {
+	position: absolute;
+	bottom: 5%;
+	left: 5%;
+	font-size: 18px;
+}
+figure {
+	margin: 0;
+}
+section {
+	padding: 0 2.5%;
+}
+section h1 {
+	color: #fff;
+	position: relative;
+}
+
+section h1:before {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 100%;
+	height: 5px;
+	top: 105%;
+	left: 0;
+	background-color: #aaa;
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+	header .container {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header .container h2#logo {
+		color: var(--vermelho);
+		font-family: 'Arial Black', sans-serif;
+		font-size: 62px;
+		font-weight: 600;
+		margin-left: 10px;
+	}
+
+	header .container nav {
+		margin-bottom: 25px;
+	}
+}
+@media screen and (max-width: 414px) {
+	.filme-principal {
+		height: 400px;
+
+		align-items: flex-end;
+	}
+	header .container h2#logo {
+		font-size: 32px;
+	}
+
+	header .container nav {
+		margin-bottom: 15px;
+	}
+	.filme-principal .titulo {
+		font-size: 32px;
+	}
+}
